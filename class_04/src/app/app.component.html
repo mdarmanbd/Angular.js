@@ -1,0 +1,26 @@
+
+<h3>{{title}}</h3>
+<!-- condition if -->
+<div *ngIf="isLoggedIn">welcome: {{name }}</div>
+<div *ngIf="!isLoggedIn"> Please logein with your email</div>
+
+<div *ngIf="isLoggedIn && false">Login Conten</div>
+
+
+<!-- <div *ngIf="isLoggedInL: else loggOut ">Sign out</div>
+<ng-template #loggOut> Sign in your email@ </ng-template> -->
+
+<!-- for loop -->
+<ul>
+  
+  <li *ngFor="let name of names; let i = index"> {{i + 1}} {{ name }}</li>
+
+</ul>
+
+<!-- switch catch -->
+<div [ngSwitch]="grade">
+  <p *ngSwitch="'A'">Grade : A</p>
+  <p *ngSwitch="'B'">Grade : B</p>
+  <p *ngSwitch="'C'">Grade : C</p>
+  <p *ngSwitchDefault>Grade : F</p>
+</div>
