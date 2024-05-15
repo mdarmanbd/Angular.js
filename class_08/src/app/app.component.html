@@ -1,0 +1,30 @@
+
+<div class="">
+  <h3>From</h3>
+
+  <form #userfrom="ngForm" (ngSubmit) = 'submitFrom(userfrom)'>
+    <div>
+      <label for="name">Nmae: </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+       [(ngModel)]="user.name"
+       
+      />
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        id="email"
+       name ="email"
+       [(ngModel)]="user.email"
+        required
+      />
+    </div>
+    <div >
+      <button type="submit" [disabled] = 'userfrom.invalid || isPageOpen'>
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
