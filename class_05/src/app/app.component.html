@@ -1,0 +1,19 @@
+
+<h3>{{title}}</h3>
+
+<!-- pipes -->
+<h4>{{name | uppercase}}</h4>
+<h4>{{name | lowercase}}</h4>
+
+<div >
+  <p>Today: {{ today }}</p>
+  <p>Today: {{ today | date : 'fullDate'}}</p>
+  <p>Today: {{ today | date : 'hh:mm:ss'}}</p>
+</div>
+
+<p>Money: {{currency | currency}}</p>
+<p>Money: {{currency | currency: 'EUR'}}</p>
+<p>Money: {{currency | currency: 'EUR' : 'symbol' : '2.1-2'}}</p>
+<p>per: {{currency | percent}}</p>
+
+<p>{{ name | append: ' Hello world' }}</p>
