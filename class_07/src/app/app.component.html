@@ -1,0 +1,15 @@
+{{messages}}
+
+<h4>
+  {{newArray}}
+</h4>
+
+
+
+
+<div *ngFor="let post of posts; let i = index" style="border-bottom: 1px solid rebeccapurple;">
+  <p>index: {{i}}</p>
+  <p>ID: {{ post.id }} </p>
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.body }}</p>
+</div>
